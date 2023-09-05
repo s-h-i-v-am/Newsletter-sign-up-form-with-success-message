@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    background: #36384d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.signup-form
+{
+    background: #fff;
+    /* width: 70%; */
+    border-radius: 10px;
+    padding: 25px 25px 25px 50px;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    /* height: 70%; */
+}
+/* .signup-details
+{
+    width: 50%;
+    height: 100%;
+} */
+.signup-details h1
+{
+    font-size: 3.8vw;
+    color: #36384d;
+    font-weight: 800;
+    /* width: 100%; */
+}
+.signup-details p
+{
+    color: #36384d;
+    font-weight: 400;
+    /* font-size: 1.1vw; */
+    line-height: 1.5vw;
+    margin: 1.25vw 0;
+    width: 90%;
+}
+.signup-details div
+{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 12px;
+}
+.signup-details div span
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.signup-details form
+{
+    margin-top: 2.25vw;
+}
+/* .signup-details form h5
+{
+    color: #36384d;
+    margin-bottom: 0.75vw;
+} */
+form .validate
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1.2vw;
+    color: #36384d;
+}
+#error
+{
+    color: #ff5454;
+}
+.MailInput
+{
+    width: 100%;
+    padding: 1.1vw 1.2vw;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #36384d;
+    margin-bottom: 1.25vw;
+    font-weight: 600;
+}
+.MailInput.err
+{
+    color: #ff5454;
+    background: #ffd2d2;
+    border-color: #ff5454;
+}
+.subscribe-btn
+{
+    width: 100%;
+    padding: 1.1vw 0;
+    border: none;
+    background: #232742;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05vw;
+    pointer-events: none;
+}
+.subscribe-btn.active
+{
+    pointer-events: auto;
+    background: linear-gradient(45deg,rgb(255, 98, 81),rgb(255, 87, 112));
+    box-shadow: 0 10px 20px rgba(255,98,81,0.25),0 10px 20px rgba(255,87,112,0.25);
+}
+.success
+{
+    max-width: 420px;
+    width: 90%;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    /* scale: 0; */
+    transition: transform 0.5s ease-in;
+}
+.success .success-msg img
+{
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1.2vw;
+}
+.success-msg h2
+{
+    font-size: 3vw;
+    line-height: 1;
+    color: #36384d;
+    margin-bottom: 1.2vw;
+}
+.success-msg p
+{
+    font-size: 0.85vw;
+    line-height: 1.2vw;
+    font-weight: 500;
+    color: #36384d;
+    /* font-size: 1.2vw; */
+}
+.success-msg p span
+{
+    font-weight: 900;
+    color: #232742;
+}
+.success button
+{
+    width: 100%;
+    margin-top: 2vw;
+    padding: 1.1vw 0;
+    background: #36384d;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: 0.3s ease-in-out;
+}
+.success button:hover
+{
+    background: linear-gradient(45deg,rgb(255, 98, 81),rgb(255, 87, 112));
+    box-shadow: 0 10px 20px rgba(255,98,81,0.25),0 10px 20px rgba(255,87,112,0.25);
+}
+body.show .signup-form
+{
+    display: none;
+}
+body.show .success
+{
+    display: block;
+    animation: anim 0.5s ease-in;
+}
+@keyframes anim{
+
+    from{
+        scale: 0;
+    }
+    to
+    {
+        scale: 1;
+    }
+}
+
+@media screen and (max-width:768px){
+    
+    .signup-form
+    {
+        width: 100%;
+        /* height: 100%; */
+        padding: 0px;
+        flex-direction: column-reverse
+    }
+    .illustration
+    {
+        width: 100%;
+    }
+    .illustration img
+    {
+        width: 100%;
+    }
+    .signup-details
+    {
+        padding: 0 4.5vw;
+    }
+    .signup-details h1
+    {
+        font-size: 10vw;
+    }
+    .signup-details p {
+        line-height: 6vw;
+        font-size: 4.5vw;
+        width: 100%;
+        margin: 2.5vw 0;
+    }
+    .signup-details div span
+    {
+        line-height: 6vw;
+        font-size: 4.5vw;
+    }
+    .signup-details form
+    {
+        margin: 5vw 0;
+    }
+    form .validate
+    {
+        margin-bottom: 2.5vw;
+    }
+    .MailInput
+    {
+        padding: 4vw 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+    .subscribe-btn
+    {
+        padding: 4.5vw;
+        font-size: 3.5vw;
+    }
+    body.show .success
+    {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .success .success-msg img
+    {
+        margin-bottom: 8vw;
+    }
+    .success-msg h2
+    {
+        font-size: 10vw;
+        margin-bottom: 4.5vw;
+    }   
+    .success-msg p
+    {
+        font-size: 3.5vw;
+        line-height: 6vw;
+    }
+    .success button
+    {
+        padding: 4.5vw 0;
+        margin-top: 4.5vw;
+    }
+}

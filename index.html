@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Sign-up Form Start-->
+
+    <div class="signup-form">
+        <div class="signup-details">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <div>
+                <span><img src="images/icon-list.svg">Product discovery and building what matters</span>
+                <span><img src="images/icon-list.svg">Measuring to ensure updates are a success</span>
+                <span><img src="images/icon-list.svg">And much more!</span>
+            </div>
+
+            <form action="">
+                <div class="validate">
+                    <h5>Email address</h5>
+                    <h5 id="error"></h5>
+                </div>
+                
+                <input type="email" placeholder="email@company.com" class="MailInput" onkeyup="ValidateMail()">
+                <!-- <button class="subscribe-btn">Subscribe to monthly newsletter</button> -->
+                <input type="button" value="Subscribe to monthly newsletter" class="subscribe-btn">
+            </form>
+        </div>
+
+        <div class="illustration">
+            <img src="images/illustration-sign-up-desktop.svg" alt="">
+        </div>
+    </div>
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <div class="success">
+        <div class="success-msg">
+            <img src="images/icon-success.svg">
+            <h2>Thanks for subscribing!</h2>
+            <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button>Dismiss message</button>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
